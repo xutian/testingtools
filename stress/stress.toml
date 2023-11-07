@@ -1,0 +1,21 @@
+[required]
+eip="127.0.0.1"
+brokerips=["127.0.0.1:9094","127.0.0.2:9094"]
+schemaname=1 # default=1
+topics=["test_1", "test_2", "test_3", "test_4"]
+threadsnum=1 # 线程数
+recordnum=32 # 每条消息行数
+sndnum=1
+runtostop=0
+datafmt="csv"
+
+[optional]
+flow=true # 是否流量控制,开启后,同时设置令牌间隔时间
+flowinterval=3 
+
+[test]
+usemethod=1 # 默认为1,通过dataproxy发送数据;2为通过kafka发送数据 
+
+[dpconf]
+user="a"
+pwd="b"
